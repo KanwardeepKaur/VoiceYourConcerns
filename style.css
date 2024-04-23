@@ -1,0 +1,53 @@
+.navbar{
+	 display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px; /* Adjust height as needed */
+  padding: 0 20px; /* Add padding to the left and right */
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  background-color:#000;
+}
+
+.navbar a:hover {
+  background-color: #000;
+  
+}
+
+.active {
+  color:aliceblue;
+  margin-right: 120px; 
+  
+}
+.navbar span {
+  margin-right: auto; /* Push the brand to the left edge */
+  text-align: left; /* Align text to the left */
+  color:yellow; /* Text color */
+  font-size: 24px; /* Font size */
+  font-weight: bold; /* Font weight */
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+     justify-content: flex-start;
+  }
+  }
+  
+  .footer{
+	  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:black;
+   color: #ddd4e0;
+   text-align: center;
+   z-index:0;
+
+  }
+  
+ .mt-0{
+	 margin-top: 0px;
+	 color: white;
+ }
+  
