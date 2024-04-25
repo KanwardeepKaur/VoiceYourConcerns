@@ -11,7 +11,12 @@ body{
 	background: #f9f9f9;
 	min-height: 100vh;
 	overflow-x: hidden;
-	
+	scroll-snap-type: y mandatory;
+}
+
+section{
+	height:100vh;
+	scroll-snap-align: start;
 }
 
 header{
@@ -48,12 +53,12 @@ header{
 }
 
 #bgVideo{
-	position: fixed;
+	position: absolute;
 	right:0;
 	bottom:0;
 	min-width: 100%;
 	min-height: 100%;
-	
+	z-index: -1;
     overflow: hidden;
 }
 video {
@@ -74,7 +79,7 @@ video {
     }
 }
 .content{
-  position: fixed;
+  position: absolute;
   bottom: 0;
   top:35%;
   left:30%;
@@ -91,58 +96,40 @@ h1 {
     h3 {
         font-size: 40px; /* Example size for h3 */
     }
-/*
-.navbar{
-	 display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 60px; 
-  padding: 0 20px; 
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  background-color:rgb(255, 255, 255);
+  
+#features{
+	background-color:greenyellow;
 }
 
-.navbar a:hover {
-  background-color: rgb(255, 255, 255);
-  
+/* Style for the about section */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set the height of the section */
+    /*background-color: rgb(255, 255, 128);*/
 }
 
-.active {
-  color:rgb(0, 128, 192);
-  margin-right: 120px; 
-  
+/* Style for the text content on the left */
+.text-content {
+    flex: 1; /* Take up all remaining space */
+    padding: 20px;
+    max-width: 50%; /* Limit width to half of the section */
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
-.navbar span {
-  margin-right: auto; 
-  text-align: left; 
-  color:rgb(0, 128, 192); 
-  font-size: 24px; 
-  font-weight: bold; 
+/* Style for the container of the image */
+.about-content {
+    max-width: 50%; /* Limit width to half of the section */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    text-align: center; /* Center the image horizontally */
 }
 
-@media screen and (max-width: 500px) {
-  .navbar a {
-     justify-content: flex-start;
-  }
-  }
+/* Style for the image within the container */
+.about-content img {
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80vh; /* Limit image height to 80% of viewport height */
+}
   
-  .footer{
-	  position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color:black;
-   color: #ddd4e0;
-   text-align: center;
-   z-index:0;
 
-  }
-  
- .mt-0{
-	 margin-top: 0px;
-	 color: white;
- }
-  */
