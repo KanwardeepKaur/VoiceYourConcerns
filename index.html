@@ -12,6 +12,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   		<!-- Custom CSS -->
   		<link rel="stylesheet" href="style.css">
+  		<script src="https://unpkg.com/scrollreveal"></script>
 	</head>
 	<body>
 		
@@ -37,29 +38,33 @@
 		</div>
 		</section>
 		
-		<section id="features">
-			<div class="feature-img">
-				<img src="customer.jpg" alt="key-features">
-			</div>
-				<div class="feature-text">
-				<h1>KEY FEATURES</h1>
-				<ul>
-	  				<li>Submit complaints with ease</li>
-	  				<li>Track the status of your complaints</li>
-	  				<li>Communicate securely with administrators</li>
-	  				<li>Join thousands of satisfied users!</li>
-				</ul>
-				
-			</div>
-		</section>
+		
+		<section id="features" class="container" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 feature-img" style="box-sizing: border-box; text-align: center;">
+            <img src="customer.jpg" alt="key-features" style="max-width: 100%; height: auto; max-height: 80vh;">
+        </div>
+        <div class="col-md-6 col-sm-12 feature-text" style="margin-top: 10%; padding: 20px; box-sizing: border-box;">
+            <h1>KEY FEATURES</h1>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="background-color: #FFE6E6; padding: 10px; border-radius: 5px; margin-bottom: 10px;"><strong>Submit complaints with ease</strong></li>
+                <li style="background-color: #E1AFD1; padding: 10px; border-radius: 5px; margin-bottom: 10px;"><strong>Track the status of your complaints</strong></li>
+                <li style="background-color: #AD88C6; padding: 10px; border-radius: 5px; margin-bottom: 10px;"><strong>Communicate securely with administrators</strong></li>
+                <li style="background-color: #7469B6; padding: 10px; border-radius: 5px; margin-bottom: 10px;"><strong>Join thousands of satisfied users!</strong></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
 		
 		<section id="about">
-			<div class="text-content">
+			<div class="text-content" style=" background-color: #EEF7FF; padding: 10px; border-radius: 10px;  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); ">
 				<h1>About us</h1>
 				<h4>VoiceYourConcerns is a platform designed to help you lodge complaints efficiently and transparently while
 					maintaining confidentialty. Easily track the status of your complaints and engage with administrators for swift
 					resolutions.</h4></div>
-			<div class="about-content">
+			<div class="about-content"  style="margin-left: 25px;">
 				<img src="handsTree.png" alt="Hands-Tree" >
 			</div>
 		</section>
@@ -68,7 +73,16 @@
 			
 		
 		</main>
-		
+		<script>
+			ScrollReveal({ 
+				reset: true,
+				distance: '60px',
+				duration:2000,
+				delay:400
+			});
+			
+			ScrollReveal().reveal('.feature-text, .text-content',{ delay: 500 });
+		</script>
 		<!-- NavBar -->
 		<!--
 		<div class="navbar">

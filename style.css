@@ -97,9 +97,7 @@ h1 {
         font-size: 40px; /* Example size for h3 */
     }
   
-#features{
-	
-}
+
 
 /* Style for the about section */
 #about {
@@ -116,6 +114,7 @@ h1 {
     padding: 20px;
     max-width: 50%; /* Limit width to half of the section */
     box-sizing: border-box; /* Include padding and border in width calculation */
+
 }
 
 /* Style for the container of the image */
