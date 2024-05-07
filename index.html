@@ -14,6 +14,144 @@
   		<link rel="stylesheet" href="style.css">
   		<script src="https://unpkg.com/scrollreveal"></script>
 	</head>
+	<style>
+		
+		.faq {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      height: 100vh; /* Adjust as needed */
+    
+    }
+
+    /* Style for the image */
+    .faq img {
+      max-width: 100%;
+      max-height: 100%;
+      /* Optional styles for image */
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      
+.ques .tab{
+	position: relative;
+	background-color: white;
+	padding: 0 20px 20px;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+	border-radius: 5px;
+	overflow: hidden;
+	
+}
+
+.ques .tab input{
+	appearance: none;	
+}
+
+.ques .tab label{
+	display: flex;
+	align-items: center;
+	cursor:pointer;
+}
+
+.ques .tab label::after{
+	content: '+';
+	position: absolute;
+	right: 20px;
+	font-size: 2em;
+	color: rgba(0,0,0,0.1);
+	transition: transform 1s;
+}
+
+.ques .tab:hover label::after{
+	color:#333;
+}
+
+.ques .tab input:checked ~ label::after{
+	transform:rotate(135deg);
+	color: #fff;
+}
+
+.ques .tab label h2{
+	width:40px;
+	height:40px;
+	background: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 1.25em;
+	border-radius: 5px;
+	margin-right:10px;
+}
+
+.ques .tab input:checked ~ label h2{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: rgba(255,255,255,0.2);
+	font-size: 8em;
+	justify-content: flex-end;
+	padding: 20px;
+}
+
+
+.ques .tab label h3{
+	position:relative;
+	font-weight: 500;
+	color: #333;
+	z-index: 10;
+}
+
+.ques .tab input:checked ~ label h3{
+	background: #fff;
+	padding: 2px 10px;
+	color: #333;
+	border-radius: 2px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.ques .tab .data{
+	max-height: 0;
+	transition: 1s;
+	overflow: hidden;
+	
+}
+
+
+.ques .tab:nth-child(1) label h2{
+	background-color: linear-gradient(135deg,#70f570,#49c628);
+}
+
+.ques .tab:nth-child(2) label h2{
+	background-color: linear-gradient(135deg,#ff96f9,#c32bac);
+}
+
+.ques .tab:nth-child(3) label h2{
+	background-color: linear-gradient(135deg,#fd6e6a,#ffc600);
+}
+
+.ques .tab:nth-child(4) label h2{
+	background-color: linear-gradient(135deg,#3c8ce7,#00eaff);
+}
+
+.ques .tab input:checked ~ .data{
+	max-height:100vh;
+	
+}
+
+.ques .tab .data p{
+	position:relative;
+	padding:10px 0;
+	color:#333;
+	z-index: 10;
+}
+
+.ques .tab input:checked ~ .data p{
+	color: #fff;
+}
+
+	</style>
 	<body>
 		
 		<header>
@@ -71,7 +209,57 @@
 		
 		<section id="questions">
 			
-		
+			<div class="faq">
+				<img src="Faq.png" alt="commonly asked questions">
+			</div>
+			
+			<div class="ques" style="margin: 0 auto;max-width: 600px;display:flex;flex-direction: column;gap:20px;">
+			<div class="tab">
+				<input type="radio" name="acc" id="acc1">
+				<label for="acc1">
+					<h2>1.</h2>
+					<h3>How can I register on VoiceYourConcerns?</h3>
+				</label>
+				<div class="data">
+					<p>To register on VoiceYourConcerns, simply click on the 'Get Started' button on the homepage and fill out the required information.</p>
+				</div>
+			</div>
+			
+			<div class="tab">
+				<input type="radio" name="acc" id="acc2">
+				<label for="acc2">
+					<h2>2.</h2>
+					<h3>What can I do if I forget my password?</h3>
+				</label>
+				<div class="data">
+					<p>If you forget your password, you can click on the 'Forgot Password' link on the login page and follow the instructions to reset your password.</p>
+				</div>
+			</div>
+			
+			<div class="tab">
+				<input type="radio" name="acc" id="acc3">
+				<label for="acc3">
+					<h2>3.</h2>
+					<h3>How can I submit a complaint on VoiceYourConcerns?</h3>
+				</label>
+				<div class="data">
+					<p>To submit a complaint, log in to your account, click on the 'Submit a Complaint' button, and fill out the complaint form with all relevant details.</p>
+				</div>
+			</div>
+			
+			<div class="tab">
+				<input type="radio" name="acc" id="acc4">
+				<label for="acc4">
+					<h2>4.</h2>
+					<h3>Can I track the status of my complaint?</h3>
+				</label>
+				<div class="data">
+					<p>Yes, you can track the status of your complaint by logging in to your account and checking the 'My Complaints' section for updates.</p>
+				</div>
+			</div>
+			
+			</div>
+		</section>
 		</main>
 		<script>
 			ScrollReveal({ 
