@@ -21,7 +21,8 @@
       justify-content: center; /* Center horizontally */
       align-items: center; /* Center vertically */
       height: 100vh; /* Adjust as needed */
-    
+      margin-top:-25%;
+      margin-bottom:-170px;
     }
 
     /* Style for the image */
@@ -74,7 +75,7 @@
 .ques .tab label h2{
 	width:40px;
 	height:40px;
-	background: #333;
+	/*background: #333;*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -82,6 +83,7 @@
 	font-size: 1.25em;
 	border-radius: 5px;
 	margin-right:10px;
+	background-image: linear-gradient(135deg, #70f570, #49c628);
 }
 
 .ques .tab input:checked ~ label h2{
@@ -97,14 +99,14 @@
 }
 
 
-.ques .tab label h3{
+.ques .tab label h5{
 	position:relative;
 	font-weight: 500;
 	color: #333;
 	z-index: 10;
 }
 
-.ques .tab input:checked ~ label h3{
+.ques .tab input:checked ~ label h5{
 	background: #fff;
 	padding: 2px 10px;
 	color: #333;
@@ -119,20 +121,19 @@
 }
 
 
-.ques .tab:nth-child(1) label h2{
-	background-color: linear-gradient(135deg,#70f570,#49c628);
+.ques .tab:nth-child(2) label h2 {
+    /* Apply gradient for the second tab */
+    background-image: linear-gradient(135deg, #ff96f9, #c32bac);
 }
 
-.ques .tab:nth-child(2) label h2{
-	background-color: linear-gradient(135deg,#ff96f9,#c32bac);
+.ques .tab:nth-child(3) label h2 {
+    /* Apply gradient for the third tab */
+    background-image: linear-gradient(135deg, #fd6e6a, #ffc600);
 }
 
-.ques .tab:nth-child(3) label h2{
-	background-color: linear-gradient(135deg,#fd6e6a,#ffc600);
-}
-
-.ques .tab:nth-child(4) label h2{
-	background-color: linear-gradient(135deg,#3c8ce7,#00eaff);
+.ques .tab:nth-child(4) label h2 {
+    /* Apply gradient for the fourth tab */
+    background-image: linear-gradient(135deg, #3c8ce7, #00eaff);
 }
 
 .ques .tab input:checked ~ .data{
@@ -152,6 +153,9 @@
 }
 
 	</style>
+	
+	
+
 	<body>
 		
 		<header>
@@ -179,10 +183,10 @@
 		
 		<section id="features" class="container" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
     <div class="row">
-        <div class="col-md-6 col-sm-12 feature-img" style="box-sizing: border-box; text-align: center;">
+        <div class="col-md-6 col-sm-12 feature-img" style="box-sizing: border-box; text-align: center;margin-top:-70px;">
             <img src="customer.jpg" alt="key-features" style="max-width: 100%; height: auto; max-height: 80vh;">
         </div>
-        <div class="col-md-6 col-sm-12 feature-text" style="margin-top: 10%; padding: 20px; box-sizing: border-box;">
+        <div class="col-md-6 col-sm-12 feature-text" style="margin-top: -20px; padding: 20px; box-sizing: border-box;">
             <h1>KEY FEATURES</h1>
             <ul style="list-style-type: none; padding-left: 0;">
                 <li style="background-color: #FFE6E6; padding: 10px; border-radius: 5px; margin-bottom: 10px;"><strong>Submit complaints with ease</strong></li>
@@ -197,12 +201,12 @@
 
 		
 		<section id="about">
-			<div class="text-content" style=" background-color: #EEF7FF; padding: 10px; border-radius: 10px;  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); ">
+			<div class="text-content" style=" background-color: #EEF7FF; padding: 10px; border-radius: 10px;  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);margin-top:-20% ">
 				<h1>About us</h1>
 				<h4>VoiceYourConcerns is a platform designed to help you lodge complaints efficiently and transparently while
 					maintaining confidentialty. Easily track the status of your complaints and engage with administrators for swift
 					resolutions.</h4></div>
-			<div class="about-content"  style="margin-left: 25px;">
+			<div class="about-content"  style="margin-left: 25px;margin-top:-350px;">
 				<img src="handsTree.png" alt="Hands-Tree" >
 			</div>
 		</section>
@@ -218,7 +222,7 @@
 				<input type="radio" name="acc" id="acc1">
 				<label for="acc1">
 					<h2>1.</h2>
-					<h3>How can I register on VoiceYourConcerns?</h3>
+					<h5>How can I register on VoiceYourConcerns?</h5>
 				</label>
 				<div class="data">
 					<p>To register on VoiceYourConcerns, simply click on the 'Get Started' button on the homepage and fill out the required information.</p>
@@ -229,7 +233,7 @@
 				<input type="radio" name="acc" id="acc2">
 				<label for="acc2">
 					<h2>2.</h2>
-					<h3>What can I do if I forget my password?</h3>
+					<h5>What can I do if I forget my password?</h5>
 				</label>
 				<div class="data">
 					<p>If you forget your password, you can click on the 'Forgot Password' link on the login page and follow the instructions to reset your password.</p>
@@ -240,7 +244,7 @@
 				<input type="radio" name="acc" id="acc3">
 				<label for="acc3">
 					<h2>3.</h2>
-					<h3>How can I submit a complaint on VoiceYourConcerns?</h3>
+					<h5>How can I submit a complaint on VoiceYourConcerns?</h5>
 				</label>
 				<div class="data">
 					<p>To submit a complaint, log in to your account, click on the 'Submit a Complaint' button, and fill out the complaint form with all relevant details.</p>
@@ -251,7 +255,7 @@
 				<input type="radio" name="acc" id="acc4">
 				<label for="acc4">
 					<h2>4.</h2>
-					<h3>Can I track the status of my complaint?</h3>
+					<h5>Can I track the status of my complaint?</h5>
 				</label>
 				<div class="data">
 					<p>Yes, you can track the status of your complaint by logging in to your account and checking the 'My Complaints' section for updates.</p>
